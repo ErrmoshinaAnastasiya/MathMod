@@ -28,8 +28,6 @@ blagoveshchensk_around = meteo_nearby_stations(lat_lon_df = blagoveshchensk, sta
 blagoveshchensk_id = blagoveshchensk_around[["BLAGOVESHCHENSK"]][["id"]][1]
 #чтобы получить таблицу всех метеостанций вокруг Благовещенска нужно выбрать первый объект из списка
 blagoveshchensk_table = blagoveshchensk_around[[1]]
-blagoveshchensk_table
-blagoveshchensk_table$id
 #отберем все станции, на расстоянии до 300 км при помощи функции filter
 blagoveshchensk_stations=filter(blagoveshchensk_table, distance<=300)
 str(blagoveshchensk_stations)
